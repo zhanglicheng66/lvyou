@@ -19,3 +19,23 @@ npm run build --report
 ```
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+
+
+
+
+########################################################操作记录
+
+
+#分支 index-swiper
+#vue init webpack Travel
+
+#npm install stylus --save
+
+#npm install stylus-loader --save
+
+#npm install --save fastclick
+
+#npm install
+#vue-awesome-swiper --save
