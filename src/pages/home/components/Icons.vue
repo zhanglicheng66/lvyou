@@ -19,6 +19,9 @@
 <script>
     export default {
         name: "HomeIcons",
+        props:{
+          list:Array
+        },
         components:{
 
         },
@@ -73,7 +76,7 @@
         computed:{
           pages(){
             const pages =[]
-            this.iconList.forEach((item,index)=>{
+            this.list.forEach((item,index)=>{
               const page = Math.floor(index/8)
                 if(!pages[page]){
                   pages[page]=[]

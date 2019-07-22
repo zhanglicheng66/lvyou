@@ -47,7 +47,7 @@
             beforeUpdate:function(){
 
             },
-            Updated:function(){
+            updated:function(){
 
             },
     }
