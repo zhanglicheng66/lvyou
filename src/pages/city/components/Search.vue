@@ -1,25 +1,20 @@
 <template>
-  <div>
-    <city-header></city-header>
-    <city-search></city-search>
+  <div class="search">
+     <input type="text" class="search-input" placeholder="输入城市名称或者拼音">
   </div>
 </template>
 
 
 
 <script>
-
-    import CityHeader from './components/Header'
-    import CitySearch from './components/Search'
     export default {
-        name: "City",
+        name: "CitySearch",
         components:{
-            CityHeader,
-            CitySearch
+
         },
         data (){
           return {
-            
+
           }
         },
         methods:{
@@ -62,6 +57,20 @@
 
 
 
-<style scoped>
-
+<style lang="stylus" scoped>
+   
+    @import '~@/assets/styles/varibles.styl' 
+    .search
+        height:0.72rem
+        padding:0 0.1rem
+        background :$bgColor
+        .search-input
+            box-sizing:border-box
+            width:100%
+            height: 0.62rem
+            line-height:0.62rem
+            text-align:center
+            border-radius:0.6rem
+            padding:0 0.1rem
+            color:#666
 </style>
