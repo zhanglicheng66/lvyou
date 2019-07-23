@@ -19,10 +19,26 @@
 
 
 <script>
+
+    import {mapState,mapGetters} from 'vuex'
     export default {
         name: "Home",
-        props:{
-          city:String
+        components:{
+
+        },
+        data (){
+          return {
+
+          }
+        },
+        methods:{
+
+        },
+        computed:{
+          ...mapState(['city'])
+        },
+        watch: {
+
         },
          beforeCreate:function(){
 
@@ -45,26 +61,11 @@
             beforeUpdate:function(){
 
             },
-            Updated:function(){
+            updated:function(){
 
             },
-        data (){
-          return {
-
-          }
-        },
-        methods:{
-
-        },
-        computed:{
-
-        },
-        watch: {
-
-        },
     }
 </script>
-
 
 
 
