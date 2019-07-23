@@ -49,7 +49,12 @@
             },
             updated:function(){
 
-            },
+            }, //用 keepalive会有
+            activated (){
+              
+            }
+    
+            
     }
 </script>
 

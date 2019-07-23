@@ -11,6 +11,7 @@
 
 
 <script>
+    import {mapState} from 'vuex'
     import axios from 'axios'
     import HomeHeader from './components/Header'
     import HomeSwiper from './components/Swiper'
@@ -28,7 +29,7 @@
         },
         data (){
           return {
-              city:'上海',
+              lastCity:'', 
               swiperList:[],
               iconList:[],
               recommendList:[],
@@ -37,7 +38,7 @@
         },
         methods:{
           getHomeInfo(){
-            axios.get('/api/index.json')
+            axios.get('/api/index.json?city=' + this.city)
                 .then(this.getHomeInfoSucc)
           },
           getHomeInfoSucc(res){
@@ -53,7 +54,7 @@
 
         },
         computed:{
-
+          ...mapState(['city'])
         },
         watch: {
 
@@ -68,6 +69,7 @@
 
             },
             mounted(){
+                this.lastCity = this.city
                 this.getHomeInfo()
 
             },
@@ -82,6 +84,13 @@
             },
             updated:function(){
 
+            },
+            //用 keepalive会有
+            activated (){
+              if(this.lastCity !== this.city){
+                this.lastCity = this.city
+                this.getHomeInfo()
+              }
             }
     }
 </script>
