@@ -26,7 +26,7 @@
         data (){
           return {
             cities:{},
-            hotCities:{}
+            hotCities:[]
           }
         },
         methods:{
