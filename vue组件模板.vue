@@ -12,6 +12,9 @@
         components:{
 
         },
+        props:{
+            list:Array
+        },
         data (){
           return {
 
@@ -52,6 +55,9 @@
             }, //用 keepalive会有
             activated (){
               
+            },
+            deactivated(){
+
             }
     
             
