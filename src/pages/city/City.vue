@@ -26,12 +26,12 @@
         data (){
           return {
             cities:{},
-<<<<<<< HEAD
-            hotCities:[]
-=======
+
+            hotCities:[],
+
             hotCities:[],
             letter:''
->>>>>>> city-components8
+
           }
         },
         methods:{
